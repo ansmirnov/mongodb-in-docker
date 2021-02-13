@@ -10,6 +10,7 @@
   - [[#set-the-network-parameters][Set the network parameters]]
   - [[#run-the-mongodb-container][Run the MongoDB container]]
   - [[#inspect-the-container][Inspect the container]]
+  - [[#see-the-container-logs][See the container logs]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -64,6 +65,12 @@ docker run -d --name $NAME --env-file .env -p $INTERFACE:$PORT:27017 \
 
 #+BEGIN_SRC sh
 docker inspect $NAME
+#+END_SRC
+
+** See the container logs
+
+#+BEGIN_SRC sh
+docker logs $NAME
 #+END_SRC
 
 ** References
