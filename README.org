@@ -9,6 +9,7 @@
   - [[#set-the-local-data-directory][Set the local data directory]]
   - [[#set-the-network-parameters][Set the network parameters]]
   - [[#run-the-mongodb-container][Run the MongoDB container]]
+  - [[#inspect-the-container][Inspect the container]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -57,6 +58,12 @@ PORT=27017
 #+BEGIN_SRC sh
 docker run -d --name $NAME --env-file .env -p $INTERFACE:$PORT:27017 \
     -v "$LOCAL_DATA_DIR:/data" $IMAGE:$TAG
+#+END_SRC
+
+** Inspect the container
+
+#+BEGIN_SRC sh
+docker inspect $NAME
 #+END_SRC
 
 ** References
