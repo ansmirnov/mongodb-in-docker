@@ -5,6 +5,7 @@
   - [[#select-the-version-of-the-docker-image][Select the version of the docker image]]
   - [[#set-container-name][Set container name]]
   - [[#pull-the-docker-image][Pull the docker image]]
+  - [[#configure-the-mongodb-instance][Configure the MongoDB instance]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -24,6 +25,15 @@ NAME=mongodb
 
 #+BEGIN_SRC sh
 docker pull $IMAGE:$TAG
+#+END_SRC
+
+** Configure the MongoDB instance
+
+Contents of the .env file.
+
+#+BEGIN_SRC sh :tangle .env.dist
+MONGO_INITDB_ROOT_USERNAME=user
+MONGO_INITDB_ROOT_PASSWORD=topsecret
 #+END_SRC
 
 ** References
