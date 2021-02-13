@@ -11,6 +11,7 @@
   - [[#run-the-mongodb-container][Run the MongoDB container]]
   - [[#inspect-the-container][Inspect the container]]
   - [[#see-the-container-logs][See the container logs]]
+  - [[#kill-the-container][Kill the container]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -71,6 +72,12 @@ docker inspect $NAME
 
 #+BEGIN_SRC sh
 docker logs $NAME
+#+END_SRC
+
+** Kill the container
+
+#+BEGIN_SRC sh
+docker kill $NAME
 #+END_SRC
 
 ** References
