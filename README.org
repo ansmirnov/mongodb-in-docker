@@ -6,6 +6,7 @@
   - [[#set-container-name][Set container name]]
   - [[#pull-the-docker-image][Pull the docker image]]
   - [[#configure-the-mongodb-instance][Configure the MongoDB instance]]
+  - [[#set-the-local-data-directory][Set the local data directory]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -34,6 +35,12 @@ Contents of the .env file.
 #+BEGIN_SRC sh :tangle .env.dist
 MONGO_INITDB_ROOT_USERNAME=user
 MONGO_INITDB_ROOT_PASSWORD=topsecret
+#+END_SRC
+
+** Set the local data directory
+
+#+BEGIN_SRC sh
+LOCAL_DATA_DIR=`pwd`/data
 #+END_SRC
 
 ** References
