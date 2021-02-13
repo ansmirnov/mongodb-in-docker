@@ -7,6 +7,7 @@
   - [[#pull-the-docker-image][Pull the docker image]]
   - [[#configure-the-mongodb-instance][Configure the MongoDB instance]]
   - [[#set-the-local-data-directory][Set the local data directory]]
+  - [[#set-the-network-parameters][Set the network parameters]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -41,6 +42,13 @@ MONGO_INITDB_ROOT_PASSWORD=topsecret
 
 #+BEGIN_SRC sh
 LOCAL_DATA_DIR=`pwd`/data
+#+END_SRC
+
+** Set the network parameters
+
+#+BEGIN_SRC sh
+INTERFACE=127.0.0.1
+PORT=27017
 #+END_SRC
 
 ** References
